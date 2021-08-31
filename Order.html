@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Order now</title>
+    <title>Place your order</title>
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
       rel="stylesheet"
       id="bootstrap-css"
     />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <style>
       .register .nav-tabs .nav-link:hover {
         border: none;
@@ -35,7 +36,7 @@
         color: #e9ecef;
       }
       .register {
-        background: -webkit-linear-gradient(left, #055a4f, #00c6ff);
+        background: -webkit-linear-gradient(left, #20e0c7, #2d30ce);
         margin-top: 3%;
         padding: 3%;
         border-radius: 2.5rem;
@@ -45,7 +46,7 @@
         border-radius: 1rem;
         padding: 1.5%;
         color: #fff;
-        background-color: #03612e;
+        background-color: #05af51;
         border: none;
         cursor: pointer;
         margin-right: 6%;
@@ -55,6 +56,19 @@
     </style>
   </head>
   <body>
+    <header class="text-gray-600 body-font">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+         
+          <span class="ml-3 text-xl">Sun Enterprise</span>
+          
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+          <a href="#" target="_blank"   class="mr-5 hover:text-gray-900">Home</a>
+          <a href="Products.html" target="_blank"   class="mr-5 hover:text-gray-900">Products</a>
+          <a href="#" target="_blank"   class="mr-5 hover:text-gray-900">About us</a>
+          <a href="Order.html" target="_blank"   class="mr-5 hover:text-gray-900">Order </a>
+        </nav>
     <div class="container register">
       <div class="row">
         <div class="col-md-12">
@@ -64,7 +78,7 @@
             role="tabpanel"
             aria-labelledby="home-tab"
           >
-            <h3 class="register-heading text-nowrap">Place your order</h3>
+            <h3 class="register-heading text-nowrap">Order </h3>
             <div class="row register-form">
               <div class="col-md-12">
                 <form autocomplete="off">
@@ -157,8 +171,23 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <footer class="text-gray-600 body-font">
+      <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+       
+        <p class="text-sm text-gray-500 ">© Sun Enterprise 2021 - All right reserved.
+        <span class="text-gray-600 ml-1 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4" rel="noopener noreferrer" target="_blank">Developed by Sagar Nandy</span>
+        </p>
+        
+      </div>
+    </footer>
   </body>
 </html>
+
+
+
+
+
+
 
 
 

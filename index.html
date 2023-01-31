@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Form Validation Using JQuery</title>
+  <title>Test Page</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <!-- stylesheet -->
   <link href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" rel="stylesheet" />
@@ -13,16 +13,27 @@
 <body class="bg-gray-200">
   <!-- Navbar -->
 
-  <nav class="navbar w-full bg-gray-800 rounded-none ">
-    <div class="container-lg px-0 ">
-      <div class="flex w-full items-center ">
-        <a class="nav-brand text-xl  mr-auto ml-0" href="https://nandysagar.in" style="color:#fff;">Form Validation
-          Using
-          JQuery-Sagar Nandy</a>
-      </div>
-
-  </nav>
-  <script src="script.js"></script>
+  <div class="flex flex-col rounded-xl bg-white bg-clip-border shadow-card">
+  <div class="text-secondary flex-1 p-6">
+    <a href="#">
+      <h3>Sagar Nandy</h3>
+    </a>
+    <p class="mb-3 opacity-60">
+      This is a test page 
+    </p>
+    <button onclick="alertShow()"
+      class="middle none center rounded-lg bg-pink-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+      data-ripple-light="true"
+    >
+      Read More
+    </button>
+  </div>
+</div>
+  <script>
+    function alertShow(){
+     window.location.href="https://nandysagar.in";
+    }
+  </script>
 
   <!--
   This script places a badge on your repl's full-browser view back to your repl's cover

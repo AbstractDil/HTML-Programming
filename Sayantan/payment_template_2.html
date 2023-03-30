@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Receipt</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+      .parent_container{
+       
+      }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+            font-size: 14px;
+            color: #555;
+        }
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        .invoice-total {
+            text-align: right;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 5px;
+            }
+            .footer {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <div class="parent_container">
+    
+    <div class="container">
+        <div>
+            <h1>Payment Receipt</h1>
+            <table>
+                <tr>
+                    <th>Payment ID</th>
+                    <td>#123456</td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                    <td>March 30, 2023</td>
+                </tr>
+                <tr>
+                    <th>Amount</th>
+                    <td>$100.00</td>
+                </tr>
+                <tr>
+                    <th>Payment Method</th>
+                    <td>Credit Card</td>
+                </tr>
+            </table>
+            <div class="invoice-total">
+                Total: $100.00
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; 2023 Payment Receipt. All rights reserved.</p>
+        </div>
+    </div>
+  </div>
+  
+</body>
+</html>

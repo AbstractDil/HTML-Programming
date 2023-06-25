@@ -3,7 +3,7 @@
 if(window.location.href.indexOf('?') == -1) {
 
     var url = window.location.href;
-    var newUrl = url + '?OrgID=MathHubStudentPortal&PoweredBy=nandysagar.in';
+    var newUrl = url + '?OrgID=MHBS&PoweredBy=nandysagar.in';
     window.history.pushState('data', 'Title', newUrl);
     console.log(newUrl);
     }
@@ -30,7 +30,7 @@ if(window.location.href.indexOf('?') == -1) {
     
     //if parameter is not equal to the value then it will redirect to home page
     
-    if(isOrg != 'MathHubStudentPortal' || isPoweredBy != 'nandysagar.in') {
+    if(isOrg != 'MHBS' || isPoweredBy != 'nandysagar.in') {
         
         alert('You have entered wrong url.');
         window.location.href = 'error_url.html';

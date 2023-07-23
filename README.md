@@ -1,2 +1,2 @@
-# Shopping
-This site is for onlineshopping. Products from Sun Enterprise.
+# This repo contains html, css, javascript, jquery, bootstrap etc
+@Author : Sagar Nandy

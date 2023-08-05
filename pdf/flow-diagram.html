@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Flow Diagram - Priyaka Dey
+    </title>
+</head>
+
+<style>
+    body {
+     /* background-color: #f2f2f2; */
+        background-color: #fff;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        margin-top: 0px !important;
+    }
+    .container {
+        width: 100%;
+        height: 100vh;
+         
+       
+    }
+
+  
+       
+       
+
+    .flow-diagram-box {
+    border: 1px solid #000;
+    display: block;
+    width: 250px;
+    height: 52px;
+    border-radius: 10px;
+
+
+       
+    }
+
+    .flow-diagram-box p {
+        text-align: center;
+        /* margin-top: 10px; */
+    }
+
+    i {
+        font-size: 15px !important;; 
+        margin:5px 0 !important;
+    }
+
+    h1
+    {
+        margin-top:0px !important;
+        margin-bottom:  40px !important;
+    }
+
+
+
+
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+    <center>
+        <h1>
+            Production 
+        </h1>
+        <div class="container">
+
+
+            <!-- Generate automatically using JS -->
+
+            <div id="myContent"></div>
+
+            
+        </div>
+
+    </center>
+
+
+<script>
+    // generate  flow diagram automatically using JS
+
+    var myContent = document.getElementById("myContent");
+
+    var content = [
+        {
+            description : "Compressor Off "
+        },
+        {
+
+            description : "Gas Back"
+
+        },
+        {
+                
+                description : "Compressor On"
+    
+            },
+            {
+    
+                description : "Salt water (Orange in colour) run"
+    
+            },
+            {
+    
+                description : "Water run through extension bar for temperature control"
+        },
+        {
+            description : "Addition of citric acid to salt water" 
+        },
+        {
+            description : "Preparation of mixture - Saccrarine water : Sweetea Powder = 1 : 2"
+        },
+        {
+            description : "Addition of sugar with GMX + MilK + Stabilizer Powder (at 80<sup>o</sup>C)"
+        },
+        {
+            description : " Addition of food colour and flavour"
+        },
+        {
+            description : " Cooling for 1 hour"
+        },
+        {
+            description : " Sent to dice (-20<sup>o</sup>C in water solution)"
+        },
+        {
+            description : "Solidification"
+        },
+        {
+            description : "Dice are sent to the  mixi"
+
+        },
+        {
+            description : "Drying of water"
+        },
+        {
+            description : " Ice - creams are ready"
+        },
+        {
+            description : " Packing"
+        },
+        {
+            description : " Sent to cold storage"
+        },
+        {
+            description : " Stored in Glycol machine (at -25<sup>o</sup>C)"
+        }
+    ]
+
+    for (var i = 0; i < content.length; i++) {
+        var div = document.createElement("div");
+        div.className = "flow-diagram-box";
+        div.innerHTML = "<p>" + content[i].description + "</p>";
+
+
+        myContent.appendChild(div);
+
+        // show arrow less than last element
+        if (i == content.length - 1) {
+            break;
+        }
+
+        var arrow = document.createElement("i");
+        arrow.className = "fa fa-arrow-down";
+
+        myContent.appendChild(arrow);
+
+
+    }
+
+
+
+</script>
+    
+</body>
+</html>

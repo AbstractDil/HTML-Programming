@@ -1,122 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Chart Js
-    </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Chart Js
+  </title>
 
-    <style>
-      body{
-        background-color: green !important;
-      }
-      hr{
-        border-bottom:1px solid black !important;
-        margin-top: 0px !important;
-      }
-    .panel   .panel-footer{
-       background-color: #fff !important;
-      }
-      .rotate-vertically {
-        transform: rotate(270deg);
-        margin-top: 115px;
-        margin-right:680px;
-        margin-left: 20px;
-      }
-     
-    </style>
+  <style>
+    body {
+      background-color: green !important;
+    }
 
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    hr {
+      border-bottom: 1px solid black !important;
+      margin-top: 0px !important;
+    }
+
+    .panel .panel-footer {
+      background-color: #fff !important;
+    }
+
+    .rotate-vertically {
+      transform: rotate(270deg);
+      margin-top: 115px;
+      margin-right: 680px;
+      margin-left: 20px;
+    }
+    
+  </style>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
+
 <body>
 
-<div class="container" style="margin-top: 18px;">
+  <div class="container" style="margin-top: 18px;">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-8 col-md-offset-2">
 
 
-            <div class="panel panel-default">
-                
-                <div class="panel-body">
+        <!-- Chart - 1  Starts -->
 
-                    <!-- <h3>Chart Js</h3>
-                    <hr> -->
+        <div class="panel panel-default">
 
-                  
-                       <canvas id="myChart" style="width:100%;"></canvas>
-                        
+          <div class="panel-body">
 
-                    
-                   </div>
+            <canvas id="myChart" style="width:100%; background-color: #fff !important;"></canvas>
+
+
+          </div>
+
+        </div>
+
+        <!-- Chart - 1  Ends -->
+
+        <!-- Chart - 2  Starts -->
+
+        <div class="panel panel-default">
+
+          <div class="panel-body">
+
+            <canvas id="myChartTwo" style="width:100%;"></canvas>
+
+
+          </div>
+
+        </div>
+
+        <!-- Chart - 2  Ends -->
+
+
+        <!-- Chart - 3  Starts -->
+
+        <div class="panel panel-default">
+
+          <div class="panel-body">
+
+            <canvas id="myChartThree" style="width:100%;"></canvas>
+           
+            </div>
 
             </div>
 
-        
-        </div>
+            <!-- Chart - 3  Ends -->
+
+            <!-- Chart - 4  Starts -->
+
+            <div class="panel panel-default">
+
+              <div class="panel-body">
+    
+                <canvas id="myChartFour" style="width:100%;"></canvas>
+    
+    
+              </div>
+    
+            </div>
+
+            <!-- Chart - 4  Ends -->
+
+
+      </div>
     </div>
-</div>
+  </div>
 
 
-<script>
-  /*
-const xValues = [0,0.075,0.1,0.15,0.175,0.2];
-const yValues = [0,2,4,6,8,10];
-*/
+  <script>
+    /*
+  const xValues = [0,0.075,0.1,0.15,0.175,0.2];
+  const yValues = [0,2,4,6,8,10];
+  */
 
-const xValues = [0,0.025,0.05,0.075,0.7625,0.125,0.15,0.175,0.2];
-const yValues = [0,1,1.5,2,4,5,6,8,10];
+    const xValues = [0.001,0.055,0.0721,0.1243,0.1259];
+    const yValues = [0, 2,4,6,8];
 
-new Chart("myChart", {
-  type: "line",
-  data: {
-    labels: xValues,
-    datasets: [{
-      fill: false,
-      lineTension: 0,
-      backgroundColor: "rgba(0,0,255,1.0)",
-      borderColor: "rgba(0,0,255,0.1)",
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    responsive: true,
-    title: {
-      display: true,
-      text: 'Fig 3 : Generation of current of sludge media against time.',
-      position: 'bottom',
-      
-    },
-    scales: {
-      yAxes: [
-        {
-          ticks: {min: 0, max:10},
-          scaleLabel: {
-            display: true,
-            labelString: "Time (t)"
-          }
+    new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [{
+          fill: false,
+          lineTension: 0,
+          backgroundColor: "rgba(0,0,255,1.0)",
+          borderColor: "rgba(0,0,255,0.1)",
+          data: yValues
+        }]
+      },
+      options: {
+        legend: { display: false },
+        responsive: true,
+        title: {
+          display: true,
+          text: 'Fig 3 : Generation of current of sludge media against time.',
+          position: 'bottom',
+
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: { min: 0, max: 8 },
+              scaleLabel: {
+                display: true,
+                labelString: "Time (t)"
+              }
+            }
+
+          ],
+
+          xAxes: [
+            {
+              ticks: { min: 0, max: 0.2 },
+              scaleLabel: {
+                display: true,
+                labelString: "Current (I) "
+              }
+            }
+
+          ]
+
         }
-       
-      ],
+      }
+    });
+  </script>
 
-      xAxes: [
-        {
-          ticks: {min: 0, max:0.2},
-          scaleLabel: {
-            display: true,
-            labelString: "Current (I) "
-          }
+  <!-- Chart -2 JS File  -->
+
+  <script>
+    /*
+  const xValues = [0,0.075,0.1,0.15,0.175,0.2];
+  const yValues = [0,2,4,6,8,10];
+  */
+
+    const xVals = [0, 0.0167, 0.0325, 0.0350, 0.0441];
+    const yVals = [0, 2,4,6,8];
+
+    new Chart("myChartTwo", {
+      type: "line",
+      data: {
+        labels: xVals,
+        datasets: [{
+          fill: false,
+          lineTension: 0,
+          backgroundColor: "rgba(0,0,255,1.0)",
+          borderColor: "rgba(0,0,255,0.1)",
+          data: yVals
+        }]
+      },
+      options: {
+        legend: { display: false },
+        responsive: true,
+        title: {
+          display: true,
+          text: 'Fig 1 : Current generation of sludge contained MFC against time.',
+          position: 'bottom',
+
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: { min: 0, max: 8 },
+              scaleLabel: {
+                display: true,
+                labelString: "Time (t)"
+              }
+            }
+
+          ],
+
+          xAxes: [
+            {
+              ticks: { min: 0, max: 0.2 },
+              scaleLabel: {
+                display: true,
+                labelString: "Current (I) "
+              }
+            }
+
+          ]
+
         }
-       
-      ]
+      }
+    });
+  </script>
 
-    }
-  }
-});
-</script>
+  <!-- Chart - 3 JS File  -->
+  <script>
+    /*
+  const xValues = [0,0.075,0.1,0.15,0.175,0.2];
+  const yValues = [0,2,4,6,8,10];
+  */
+
+    const xValue = [0, 0.01,0.02];
+    const yValue = [0,4,8];
+
+    new Chart("myChartThree", {
+      type: "line",
+      data: {
+        labels: xValue,
+        datasets: [{
+          fill: false,
+          lineTension: 0,
+          backgroundColor: "rgba(0,0,255,1.0)",
+          borderColor: "rgba(0,0,255,0.1)",
+          data: yValue
+        }]
+      },
+      options: {
+        legend: { display: false },
+        responsive: true,
+        title: {
+          display: true,
+          text: 'Fig 2 : Generation of electric conductivity against time.',
+          position: 'bottom',
+
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: { min: 0, max: 8 },
+              scaleLabel: {
+                display: true,
+                labelString: "Time (t)"
+              }
+            }
+
+          ],
+
+          xAxes: [
+            {
+              ticks: { min: 0, max: 0.2 },
+              scaleLabel: {
+                display: true,
+                labelString: " Electric Conductivity (EC) "
+              }
+            }
+
+          ]
+
+        }
+      }
+    });
+  </script>
+
+  <!-- Chart - 4 JS File  -->
+
+  <script>
+    /*
+  const xValues = [0,0.075,0.1,0.15,0.175,0.2];
+  const yValues = [0,2,4,6,8,10];
+  */
+
+    const xVal = [0.01,0.02,0.03];
+    const yVal = [0,4,8];
+
+    new Chart("myChartFour", {
+      type: "line",
+      data: {
+        labels: xVal,
+        datasets: [{
+          fill: false,
+          lineTension: 0,
+          backgroundColor: "rgba(0,0,255,1.0)",
+          borderColor: "rgba(0,0,255,0.1)",
+          data: yVal
+        }]
+      },
+      options: {
+        legend: { display: false },
+        responsive: true,
+        title: {
+          display: true,
+          text: 'Fig 4 : Generation of electric conductivity of river water against time.',
+          position: 'bottom',
+
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: { min: 0, max: 8 },
+              scaleLabel: {
+                display: true,
+                labelString: "Time (t)"
+              }
+            }
+
+          ],
+
+          xAxes: [
+            {
+              ticks: { min: 0, max: 0.2 },
+              scaleLabel: {
+                display: true,
+                labelString: "Current (I) "
+              }
+            }
+
+          ]
+
+        }
+      }
+    });
+  </script>
 
 </body>
+
 </html>
